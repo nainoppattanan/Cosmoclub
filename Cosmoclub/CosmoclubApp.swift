@@ -10,7 +10,7 @@ import SwiftUI
 struct CosmoclubApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CreateSheetView()
         }
     }
 }

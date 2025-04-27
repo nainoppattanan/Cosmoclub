@@ -150,10 +150,11 @@ struct CreateSheetView: View {
                 }
             }
         }
-//        onAppear(perform: {
-//            requestPhotoLibraryAccess()
-//        })
+        .onAppear(perform: {
+            requestPhotoLibraryAccess()
+        })
     }
+    
     private func requestPhotoLibraryAccess() {
         let status = PHPhotoLibrary.authorizationStatus()
     
