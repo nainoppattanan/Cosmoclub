@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-
 @main
 struct CosmoclubApp: App {
     var body: some Scene {
