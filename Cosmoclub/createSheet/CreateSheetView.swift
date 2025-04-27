@@ -14,6 +14,8 @@ struct CreateSheetView: View {
     @State var threadsImage: PhotosPickerItem? = nil
     @State var selectedImage: UIImage? = nil
     
+//    @Binding var sendThreads: [Thread]
+    
     var body: some View {
         VStack(alignment: .center) {
             VStack() {
@@ -127,7 +129,10 @@ struct CreateSheetView: View {
 //                    Spacer()
                     
                     Button(action: {
-                        print("n")
+                        let newThreads = Thread(content: threadsContent, image: selectedImage)
+//                        sendThreads.append(newThreads)
+                        
+                        
                     }, label: {
                         Image(systemName: "arrow.right.circle")
                     })
@@ -180,7 +185,7 @@ struct CreateSheetView: View {
 }
 
 #Preview {
-    CreateSheetView()
+    CreateSheetView(/*sendThreads: .constant(Thread(content: "Hi"))*/)
 }
 
 //import SwiftUI
